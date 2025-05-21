@@ -1,0 +1,101 @@
+body {
+    background: #000;
+}
+
+main {
+    color: #444;
+    height: max-content;
+
+    max-width: 650px;
+    /* margin: 40px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* h2 {
+      opacity: 50%;
+      line-height: 0.8;
+  } */
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#subheading  {
+    font-variant: small-caps; opacity: 50%; font-size: larger;
+}
+
+@media (prefers-color-scheme: dark) {
+    main {
+        color: #c9d1d9;
+        background: #000
+    }
+
+    a:link {
+        color: #58a6ff
+    }
+
+    a:visited {
+        color: #8e96f0
+    }
+}
+
+ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+ul li a:visited {
+    color: inherit;
+}
+
+
+/* Footer */
+footer {
+    font-variant: small-caps;
+    text-align: center;
+    font-size: small;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /* Semi-transparent background */
+    display: none;
+    /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    /* z-index: 1000; */
+    /* Ensure it appears above other content */
+}
+
+#overlay img {
+    max-width: 10%;
+    /* Responsive image */
+    max-height: 10%;
+}
+
+/* For matrix effect */
+#canv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    /* Ensure it appears above other content */
+}

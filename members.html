@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUG OF SSN & SNU</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>LUG @ SSN & SNU</h1>
+            <h2 id="subheading">The best techies/hackers of Chennai
+            </h2>
+        </header>
+        <br>
+
+        <div style="align-self: center;">
+            <h3>Members</h3>
+
+            <ul id="memberlist">
+                <li><a href="members/vicfic.html">Varghese K James &lt;- admin</a></li>
+                <li>Sudarshan Jaisankar</li>
+                <li>Pranav Krishna</li>
+                <li>Vishal Murugan</li>
+                <li>Ashiq S</li>
+                <li>Pranaov S</li>
+                <li>Narendra S</li>
+                <li>Ammog Warrier</li>
+                <li>Ethan Rajesh</li>
+                <li>Saravana Senthil</li>
+                <li>Uthayamurthy R</li>
+                <li>Nikilesh L</li>
+                <li>Vijayan Sankar</li>
+                <li>Pranav Suryanarayanan</li>
+                <li>Sthuthi Arun</li>
+                <li>Sarvesh K P</li>
+                <li>Surya K</li>
+                <li>Udhaya M</li>
+            </ul>
+        </div>
+
+        <script>
+            function shuffleList(ulElementId) {
+                const ul = document.getElementById(ulElementId);
+                const listItems = Array.from(ul.children);
+                const n = listItems.length;
+
+                // Fisher-Yates (Knuth) shuffle algorithm
+                for (let i = n - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [listItems[i], listItems[j]] = [listItems[j], listItems[i]];
+                }
+                ul.innerHTML = '';
+                listItems.forEach(item => ul.appendChild(item));
+            }
+            shuffleList('memberlist');
+        </script>
+
+        <p style="text-align: center;"> <a href="index.html">Go back</a></p>
+
+        <br>
+        <hr>
+        <footer> (c) 2025 Linux User Group @ SSN & SNU</footer>
+    </main>
+
+
+    <canvas aria-label="background" id="canv" width="500" height="200"></canvas>
+</body>
+
+</html>
