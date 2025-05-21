@@ -1,0 +1,25 @@
+name: Deploy to neocities
+
+# only run on changes to master
+on:
+  push:
+    branches:
+      - master
+      
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    # When the dist_dir is ready, deploy it to neocities
+    - name: Deploy to neocities
+      uses: bcomnes/deploy-to-neocities@v3.0.2
+      with:
+        api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+        cleanup: true
+        dist_dir: public
+        neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
+        preview_before_deploy: true
